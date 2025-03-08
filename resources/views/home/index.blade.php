@@ -151,7 +151,7 @@
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="mb-5" style="font-family: 'Poppins', sans-serif;">Kompetensi Keahlian
+                <h1 class="mb-5" style="font-family: 'Poppins', sans-serif;">Program Keahlian
                 </h1>
             </div>
             <div class="row g-3">

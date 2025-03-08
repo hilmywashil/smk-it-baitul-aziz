@@ -23,7 +23,7 @@
 <body class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
 
     <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
-        <div class="text-center">
+        <div class="text-center mb-4">
             <img src="{{ asset('images/logo.png') }}" alt="Logo SMK IT Baitul Aziz" width="100">
         </div>
 
@@ -47,20 +47,13 @@
                     placeholder="Masukkan kata sandi" required>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                    <label class="form-check-label" for="remember">Ingat saya</label>
-                </div>
+            {{-- <div class="d-flex justify-content-between align-items-center">
                 <a href="{{ route('password.request') }}" class="text-decoration-none">Lupa password?</a>
-            </div>
+            </div> --}}
 
-            <button type="submit" class="btn btn-primary w-100 mt-3">Masuk</button>
+            <button type="submit" class="btn btn-primary w-100 mt-2">Masuk</button>
+            <a href="{{ route('home') }}" class="btn btn-secondary w-100 mt-2">Kembali</a>
         </form>
-
-        <div class="text-center mt-3">
-            <p class="mb-0">Belum punya akun? <a href="{{ route('register') }}" class="text-primary">Daftar</a></p>
-        </div>
     </div>
 
 </body>

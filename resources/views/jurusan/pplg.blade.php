@@ -2,7 +2,8 @@
 
 @section('content')
     <style>
-        h3, h4 {
+        h3,
+        h4 {
             font-family: 'Poppins', sans-serif;
         }
     </style>
@@ -76,6 +77,7 @@
                             <li>Cybersecurity Analyst</li>
                         </ul>
 
+                        {{--
                         <hr>
 
                         <h4>Galeri Kegiatan</h4>
@@ -89,49 +91,21 @@
                             <div class="col-md-4 mb-3">
                                 <img src="{{ asset('images/pplg3.jpg') }}" class="img-fluid rounded" alt="Kegiatan 3">
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <hr>
+                        {{-- <hr>
 
-                        <h4>Kontak & Pendaftaran</h4>
-                        <p>Untuk informasi lebih lanjut, silakan hubungi <strong>admin sekolah</strong> atau kunjungi bagian
-                            <a href="#">pendaftaran online</a>.</p>
+                        <h4>Kontak</h4>
+                        <p>Untuk informasi lebih lanjut, silakan hubungi Admin Sekolah <a
+                                href="{{ route('kontak') }}">Disini</a>.
+                        </p> --}}
 
                     </div>
                 </div>
             </div>
 
             <!-- Sidebar -->
-            <div class="col-lg-4 mb-4">
-                <!-- Follow Us Section -->
-                <div class="card bg-white p-4 rounded shadow mb-4">
-                    <h4 class="mb-3">Tentang Sekolah</h4>
-                    <div class="ratio ratio-16x9 mt-4">
-                        <iframe src="https://www.youtube.com/embed/etHq7lI2-BE?si=nFk-KP0mcby5iCna" title="YouTube video"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <!-- Latest News Section -->
-                <div class="card bg-white p-4 rounded shadow mb-4">
-                    <h4 class="mb-3">Berita Terbaru</h4>
-                    @foreach($latestBerita as $news)
-                        <div class="mb-3">
-                            <a href="{{ route('berita.show', $news->id) }}" class="text-decoration-none text-dark">
-                                <div class="d-flex">
-                                    <img src="{{ $news->image }}" alt="{{ $news->judul }}" class="me-3"
-                                        style="width: 60px; height: 60px; object-fit: cover;">
-                                    <div>
-                                        <h5 class="mb-1">{{ $news->judul }}</h5>
-                                        <small class="text-muted"><i class="bi bi-calendar"></i>
-                                            {{ date('d M Y', strtotime($news->tgl)) }}</small>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
+            @include('layouts.sidebarshow')
         </div>
     </div>
 

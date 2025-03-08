@@ -251,6 +251,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{ request()->is('admin/agenda') ? 'active' : '' }}"
+                        href="{{ route('admin.agenda') }}">
+                        <i class="fas fa-address-book"> </i>
+                        <span class="item-name">Agenda</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{ request()->is('dashboard/kontak') ? 'active' : '' }}"
                         href="{{ route('kontak.index') }}">
                         <i class="fas fa-envelope"></i>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Agenda;
 use App\Models\Ekstrakulikuler;
 use App\Models\ManajemenGuru;
 use Illuminate\Http\Request;
@@ -62,5 +63,10 @@ class HomeController extends Controller
         $ekskul = Ekstrakulikuler::first();
         $latestBerita = $this->getLatestBerita();
         return view('informasi_sekolah.ekstrakulikuler', compact('ekskul', 'latestBerita'));
+    }
+    public function agenda()
+    {
+        $agendas = Agenda::orderBy('start_time', 'asc')->get();
+        return view('agenda.index', compact('agendas'));
     }
 }

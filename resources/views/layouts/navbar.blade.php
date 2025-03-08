@@ -108,6 +108,8 @@
                     class="nav-item nav-link {{ request()->is('berita') ? 'active' : '' }}">Berita</a>
                 <a href="{{ route('kontak') }}"
                     class="nav-item nav-link {{ request()->is('kontak') ? 'active' : '' }}">Kontak</a>
+                <a href="{{ route('agenda') }}"
+                    class="nav-item nav-link {{ request()->is('agenda') ? 'active' : '' }}">Agenda</a>
             </div>
         </div>
     </nav>

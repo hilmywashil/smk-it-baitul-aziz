@@ -175,7 +175,6 @@
 }
 
 
-/*** Header carousel ***/
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
@@ -206,7 +205,6 @@
 }
 
 
-/*** Section Title ***/
 .section-title {
     position: relative;
     display: inline-block;
